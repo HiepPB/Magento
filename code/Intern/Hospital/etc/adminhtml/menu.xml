@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Intern_Hospital::hospital" title="Hospital" module="Intern_Hospital" sortOrder="51" resource="Intern_Hospital::hospital"/>
+        <add id="Intern_Hospital::posts_menu" title="Hospital " module="Intern_Hospital" sortOrder="10" action="hospital/posts/index" resource="Intern_Hospital::posts" parent="Intern_Hospital::hospital"/>
+        <add id="Intern_Hospital::hospital_configuration" title="Configuration" module="Intern_Hospital" sortOrder="99" parent="Intern_Hospital::hospital" action="adminhtml/system_config/edit/section/hospital" resource="Intern_Hospital::hospital_configuration"/>
+    </menu>
+</config>
