@@ -30,49 +30,49 @@ class UpgradeSchema implements UpgradeSchemaInterface
                             'primary'  => true,
                             'unsigned' => true,
                         ],
-                        'Post ID'
+                        'Posts ID'
                     )
                     ->addColumn(
                         'name',
                         Table::TYPE_TEXT,
                         255,
                         ['nullable => false'],
-                        'Post Name'
+                        'Posts Name'
                     )
                     ->addColumn(
                         'url_key',
                         Table::TYPE_TEXT,
                         255,
                         [],
-                        'Post URL Key'
+                        'Posts URL Key'
                     )
                     ->addColumn(
                         'post_content',
                         Table::TYPE_TEXT,
                         '64k',
                         [],
-                        'Post Post Content'
+                        'Posts Posts Content'
                     )
                     ->addColumn(
                         'tags',
                         Table::TYPE_TEXT,
                         255,
                         [],
-                        'Post Tags'
+                        'Posts Tags'
                     )
                     ->addColumn(
                         'status',
                         Table::TYPE_INTEGER,
                         1,
                         [],
-                        'Post Status'
+                        'Posts Status'
                     )
                     ->addColumn(
                         'featured_image',
                         Table::TYPE_TEXT,
                         255,
                         [],
-                        'Post Featured Image'
+                        'Posts Featured Image'
                     )
                     ->addColumn(
                         'created_at',
@@ -86,7 +86,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
                         null,
                         ['nullable' => false, 'default' => Table::TIMESTAMP_INIT_UPDATE],
                         'Updated At')
-                    ->setComment('Post Table');
+                    ->setComment('Posts Table');
                 $connection->createTable($table);
 
                 $connection->addIndex(
