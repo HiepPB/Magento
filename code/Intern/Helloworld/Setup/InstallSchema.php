@@ -30,49 +30,49 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
                         'primary'  => true,
                         'unsigned' => true,
                     ],
-                    'Post ID'
+                    'Posts ID'
                 )
                 ->addColumn(
                     'name',
                     \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
                     255,
                     ['nullable => false'],
-                    'Post Name'
+                    'Posts Name'
                 )
                 ->addColumn(
                     'url_key',
                     \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
                     255,
                     [],
-                    'Post URL Key'
+                    'Posts URL Key'
                 )
                 ->addColumn(
                     'post_content',
                     \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
                     '64k',
                     [],
-                    'Post Post Content'
+                    'Posts Posts Content'
                 )
                 ->addColumn(
                     'tags',
                     \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
                     255,
                     [],
-                    'Post Tags'
+                    'Posts Tags'
                 )
                 ->addColumn(
                     'status',
                     \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
                     1,
                     [],
-                    'Post Status'
+                    'Posts Status'
                 )
                 ->addColumn(
                     'featured_image',
                     \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
                     255,
                     [],
-                    'Post Featured Image'
+                    'Posts Featured Image'
                 )
                 ->addColumn(
                     'created_at',
@@ -86,7 +86,7 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
                     null,
                     ['nullable' => false, 'default' => \Magento\Framework\DB\Ddl\Table::TIMESTAMP_INIT_UPDATE],
                     'Updated At')
-                ->setComment('Post Table');
+                ->setComment('Posts Table');
 
             $connection->createTable($table);
 
